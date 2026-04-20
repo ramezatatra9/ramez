@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Overflow Demonstration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: #f0f0f0;
+        }
+
+        /* div 1 - visible */
+        #div1 {
+            top: 80px;
+            left: 80px;
+            overflow: visible;
+        }
+
+        /* div 2 - hidden */
+        #div2 {
+            top: 150px;
+            left: 200px;
+            overflow: hidden;
+        }
+
+        /* div 3 - scroll */
+        #div3 {
+            top: 250px;
+            left: 100px;
+            width: 300px;
+            overflow: scroll;
+        }
+
+        /* div 4 - auto */
+        #div4 {
+            top: 100px;
+            left: 380px;
+            height: 300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>CSS Overflow Demonstration</h2>
+
+<!-- نفس المحتوى بكل div -->
+
+<div id="div1" class="box">
+    <b>Name:</b> Abdul Rahman Mustafa Sheikh Zaid<br>
+    <b>ID:</b> 202311369<br>
+    <p>
+        I was born on December 17, 2005. I study Artificial Intelligence at Palestine Technical University - Kadoorie, pursuing a Bachelor's degree. I achieved a 93.4% average in my high school diploma (Industrial Branch) specializing in Renewable Energy at Martyr Izz al-Din al-Qassam Secondary School for Boys in Ya'bad. I love football, I play it and follow it. My favorite team is Real Madrid, and I joined Ya'bad Sports Club in September 2023. Peace be upon you.
+    </p>
+</div>
+
+<div id="div2" class="box">
+    <b>Name:</b> Abdul Rahman Mustafa Sheikh Zaid<br>
+    <b>ID:</b> 202311369<br>
+    <p>
+        I was born on December 17, 2005. I study Artificial Intelligence at Palestine Technical University - Kadoorie, pursuing a Bachelor's degree. I achieved a 93.4% average in my high school diploma (Industrial Branch) specializing in Renewable Energy at Martyr Izz al-Din al-Qassam Secondary School for Boys in Ya'bad. I love football, I play it and follow it. My favorite team is Real Madrid, and I joined Ya'bad Sports Club in September 2023. Peace be upon you.
+    </p>
+</div>
+
+<div id="div3" class="box">
+    <b>Name:</b> Abdul Rahman Mustafa Sheikh Zaid<br>
+    <b>ID:</b> 202311369<br>
+    <p>
+        I was born on December 17, 2005. I study Artificial Intelligence at Palestine Technical University - Kadoorie, pursuing a Bachelor's degree. I achieved a 93.4% average in my high school diploma (Industrial Branch) specializing in Renewable Energy at Martyr Izz al-Din al-Qassam Secondary School for Boys in Ya'bad. I love football, I play it and follow it. My favorite team is Real Madrid, and I joined Ya'bad Sports Club in September 2023. Peace be upon you.
+    </p>
+</div>
+
+<div id="div4" class="box">
+    <b>Name:</b> Abdul Rahman Mustafa Sheikh Zaid<br>
+    <b>ID:</b> 202311369<br>
+    <p>
+        I was born on December 17, 2005. I study Artificial Intelligence at Palestine Technical University - Kadoorie, pursuing a Bachelor's degree. I achieved a 93.4% average in my high school diploma (Industrial Branch) specializing in Renewable Energy at Martyr Izz al-Din al-Qassam Secondary School for Boys in Ya'bad. I love football, I play it and follow it. My favorite team is Real Madrid, and I joined Ya'bad Sports Club in September 2023. Peace be upon you.
+    </p>
+</div>
+
+</body>
+</html>
