@@ -3,357 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>كشف أسعار معرض أبو رامز</title>
-
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',Tahoma,sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    color:#222;
-    padding:20px;
-}
-
-.header{
-    background:linear-gradient(135deg,#0d47a1,#1976d2);
-    color:white;
-    text-align:center;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-}
-
-.header h1{
-    margin-bottom:10px;
-}
-
-.search-box{
-    position:sticky;
-    top:10px;
-    background:white;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
-    margin-bottom:20px;
-    text-align:center;
-    z-index:999;
-}
-
-#searchInput{
-    width:70%;
-    max-width:500px;
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:10px;
-    font-size:16px;
-}
-
-button{
-    padding:12px 20px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    margin:5px;
-    font-size:15px;
-}
-
-#searchBtn{
-    background:#1976d2;
-    color:white;
-}
-
-#clearBtn{
-    background:#e53935;
-    color:white;
-}
-
-#resultCount{
-    margin-top:10px;
-    font-weight:bold;
-    color:#1976d2;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-thead th{
-    background:#0d47a1;
-    color:white;
-    padding:15px;
-    position:sticky;
-    top:95px;
-}
-
-td{
-    padding:12px;
-    border-bottom:1px solid #eee;
-}
-
-tbody tr:hover{
-    background:#e3f2fd;
-}
-
-mark{
-    background:#ffeb3b;
-}
-
-.hidden{
-    display:none;
-}
-
-#topBtn{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:#1976d2;
-    color:white;
-    font-size:22px;
-    display:none;
-}
-
-.credit{
-    margin-top:15px;
-    display:inline-block;
-    background:#1D70B8;
-    color:white;
-    padding:8px 15px;
-    border-radius:8px;
-}
-
-@media(max-width:768px){
-
-    #searchInput{
-        width:100%;
-    }
-
-    table{
-        font-size:13px;
-    }
-
-    td,th{
-        padding:8px;
-    }
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Tahoma,sans-serif}
+body{background:#f4f6f9;color:#222;padding:20px}
+.header{background:linear-gradient(135deg,#0d47a1,#1976d2);color:#fff;text-align:center;padding:25px;border-radius:15px;margin-bottom:20px}
+.search-box{background:#fff;padding:15px;border-radius:12px;margin-bottom:20px;text-align:center}
+#searchInput{width:80%;padding:12px;border:1px solid #ccc;border-radius:10px}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:12px;border-bottom:1px solid #eee}
+thead th{background:#0d47a1;color:white;position:sticky;top:0}
+tbody tr:hover{background:#e3f2fd}
 </style>
 </head>
-
 <body>
-
 <div class="header">
-    <h1>كشف أسعار معرض أبو رامز</h1>
-    <p>نظام البحث الذكي عن المنتجات والأسعار</p>
+<h1>كشف أسعار معرض أبو رامز</h1>
+<p>نسخة تجريبية محسنة</p>
 </div>
 
 <div class="search-box">
-
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="ابحث برقم الصنف أو اسم المنتج 🔍"
-    >
-
-    <br>
-
-    <button id="searchBtn">بحث</button>
-    <button id="clearBtn">مسح</button>
-
-    <div id="resultCount"></div>
-
-    <div class="credit">
-        تصميم وتنفيذ المبرمج رامز 💯
-    </div>
-
+<input type="text" id="searchInput" placeholder="ابحث عن منتج...">
 </div>
 
 <table id="priceTable">
-
-    <thead>
-        <tr>
-            <th>رقم الصنف</th>
-            <th>اسم الصنف</th>
-            <th>السعر (₪)</th>
-        </tr>
-    </thead>
-
-    <tbody>
-
-        <tr>
-            <td>I00002001</td>
-            <td>ثلاجة سامسونج 4 أبواب زجاج أسود</td>
-            <td>3450</td>
-        </tr>
-
-        <tr>
-            <td>I00002002</td>
-            <td>غسالة ال جي 9 كيلو انفيرتر</td>
-            <td>2250</td>
-        </tr>
-
-        <tr>
-            <td>I00002003</td>
-            <td>شاشة سمارت 55 بوصة 4K</td>
-            <td>1450</td>
-        </tr>
-
-    </tbody>
-
+<thead>
+<tr>
+<th>رقم الصنف</th>
+<th>اسم الصنف</th>
+<th>السعر (₪)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>I00002001</td><td>ثلاجة سامسونج 4 أبواب زجاج أسود</td><td>3450</td></tr>
+<tr><td>I00002002</td><td>غسالة ال جي 9 كيلو انفيرتر</td><td>2250</td></tr>
+<tr><td>I00002003</td><td>شاشة سمارت 55 بوصة 4K</td><td>1450</td></tr>
+</tbody>
 </table>
-
-<button id="topBtn">↑</button>
-
-<script>
-
-function clearHighlights(){
-
-    document.querySelectorAll('#priceTable td').forEach(td=>{
-        td.innerHTML = td.textContent;
-    });
-
-}
-
-function smartSearch(){
-
-    const input = document
-        .getElementById('searchInput')
-        .value
-        .trim()
-        .toLowerCase();
-
-    const rows = document.querySelectorAll('#priceTable tbody tr');
-
-    let matches = 0;
-
-    clearHighlights();
-
-    if(input === ''){
-
-        rows.forEach(row=>{
-            row.classList.remove('hidden');
-        });
-
-        document.getElementById('resultCount').textContent='';
-        return;
-    }
-
-    const words = input.split(/\s+/);
-
-    rows.forEach(row=>{
-
-        const rowText = Array.from(row.cells)
-            .map(cell=>cell.textContent.toLowerCase())
-            .join(' ');
-
-        const found = words.every(word =>
-            rowText.includes(word)
-        );
-
-        if(found){
-
-            row.classList.remove('hidden');
-
-            row.querySelectorAll('td').forEach(td=>{
-
-                let html = td.textContent;
-
-                words.forEach(word=>{
-
-                    if(word.length){
-
-                        const regex =
-                            new RegExp(`(${word})`,'gi');
-
-                        html = html.replace(
-                            regex,
-                            '<mark>$1</mark>'
-                        );
-
-                    }
-
-                });
-
-                td.innerHTML = html;
-
-            });
-
-            matches++;
-
-        }else{
-
-            row.classList.add('hidden');
-
-        }
-
-    });
-
-    document.getElementById('resultCount').textContent =
-        matches > 0
-        ? `عدد النتائج: ${matches}`
-        : 'لا توجد نتائج';
-
-}
-
-document
-    .getElementById('searchInput')
-    .addEventListener('input',smartSearch);
-
-document
-    .getElementById('searchBtn')
-    .addEventListener('click',smartSearch);
-
-document
-    .getElementById('clearBtn')
-    .addEventListener('click',()=>{
-
-        document.getElementById('searchInput').value='';
-
-        smartSearch();
-
-    });
-
-const topBtn = document.getElementById('topBtn');
-
-window.addEventListener('scroll',()=>{
-
-    if(window.scrollY > 300){
-
-        topBtn.style.display='block';
-
-    }else{
-
-        topBtn.style.display='none';
-
-    }
-
-});
-
-topBtn.addEventListener('click',()=>{
-
-    window.scrollTo({
-        top:0,
-        behavior:'smooth'
-    });
-
-});
-
-</script>
-
 </body>
 </html>
